@@ -1564,10 +1564,14 @@
     (function ($) {
         jq = $;
     })(jQuery);
+    let initCurLang = 'EN';
+    if (window.localStorage.getItem("curLang") == 'EN' || window.localStorage.getItem("curLang") == 'CN') {
+        initCurLang = window.localStorage.getItem("curLang")
+    }
     new Vue({
         el: '#page-container',
         data: {
-            curLang: window.localStorage.getItem("curLang") || 'EN',
+            curLang: initCurLang,
             fullName: '',
             email: '',
             phone: '',
@@ -1577,7 +1581,7 @@
             submitClick: true
         },
         i18n: new VueI18n({
-            locale: (window.localStorage.getItem("curLang") || 'EN').toLocaleLowerCase(),
+            locale: initCurLang.toLocaleLowerCase(),
             messages: language
         }),
         mounted() {
@@ -1612,8 +1616,12 @@
                             jq(this).css('color', '#FFFFFF')
                         }
                         jq(this).on('click', function (_) {
-                            that.toggleLang(jq(this)[0].text.toLocaleLowerCase())
-                            that.setup_collapsible_submenus()
+                            let lang = jq(this)[0].text
+                            if (lang == 'EN' || lang == 'CN') {
+                                that.toggleLang(lang.toLocaleLowerCase())
+                                that.setup_collapsible_submenus()
+                            }
+                            that.hiddenMenu()
                         });
                     } else {
                         jq(this).on('click', function (event) {
@@ -1622,6 +1630,11 @@
                         });
                     }
                 });
+            },
+            hiddenMenu() {
+                setTimeout(() => {
+                    jq('#mobile_menu').css({'display': 'none'})
+                }, 250)
             },
             submit () {
                 if (!this.fullName) {
