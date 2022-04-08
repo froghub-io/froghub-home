@@ -828,6 +828,10 @@
         .et_pb_column_3 {
             margin-bottom: 60px;
         }
+
+        .et_pb_button_0_a {
+            margin: 26px 13px 0px 13px !important;
+        }
     }
 
     @media only screen and (max-width: 767px) {
@@ -1231,15 +1235,15 @@
                                                 <div class="et_pb_text_inner"><h1>{{$t('Human Aata Factories')}}</h1></div>
                                             </div> <!-- .et_pb_text -->
                                             <div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner"><p><span>{{$t('Human Aata Factories Details')}}</span></p>
+                                                <div class="et_pb_text_inner"><p><span style="">{{$t('Human Aata Factories Details')}}</span></p>
                                                 </div>
                                             </div> <!-- .et_pb_text -->
-                                            <div class="et_pb_button_module_wrapper et_pb_button_10_wrapper  et_pb_module">
-                                                <a style="margin: 26px 13px 0px 13px; width: 216px; text-align: center"
-                                                   class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
+                                            <div class="et_pb_button_module_wrapper et_pb_button_10_wrapper  et_pb_module et_pb_button_alignment_tablet_center">
+                                                <a style="width: 216px; text-align: center"
+                                                   class="et_pb_button et_pb_button_0 et_pb_bg_layout_light et_pb_button_0_a"
                                                    href="./filfrog.html" target="_self">{{$t('StorageProvider')}}</a>
-                                                <a style="margin: 26px 13px 0px 13px; background: #ffffff;color: #151A24; width: 216px; text-align: center"
-                                                   class="et_pb_button et_pb_button_11 et_pb_bg_layout_light"
+                                                <a style="background: #ffffff;color: #151A24; width: 216px; text-align: center"
+                                                   class="et_pb_button et_pb_button_11 et_pb_bg_layout_light et_pb_button_0_a"
                                                    href="./files.html" target="_self">{{$t('Storage Data')}}</a>
                                             </div>
                                         </div> <!-- .et_pb_column -->
@@ -1274,74 +1278,90 @@
                                                 </p></div>
                                             </div> <!-- .et_pb_text -->
                                         </div> <!-- .et_pb_column -->
-                                        <div style="padding-top: 140px;padding-left: 10%;"
+                                        <div style="padding-top: 140px;padding-left: 10%; padding-right: 10%;"
                                              class="et_pb_text_align_left">
-                                            <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner">
-                                                    <h1>
-                                                        <img src="assets/version-icon.png">
+                                            <div style="display: flex; flex-direction: row">
+                                                <img src="assets/version-icon.png" style="height: 15px; margin: 10px 10px 0px 0px;">
+                                                <div style="display: flex; flex-direction: column">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
+                                                        <div class="et_pb_text_inner">
+                                                            <h1>
                                                         <span style="font-size: 24px; padding-bottom: 0px;font-weight: bold;"
                                                               class="blob-code-inner blob-code-marker"
                                                               data-code-marker="+">{{$t('Enterprise')}}</span>
-                                                    </h1>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="et_pb_module  et_pb_text_align_left ">
+                                                        <div class="et_pb_text_inner et_pb_text_align_left">
+                                                            <p>
+                                                                <span style="font-weight: 400; font-size: 15px">{{$t('Enterprise Details')}}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="et_pb_module  et_pb_text_align_left ">
-                                                <div class="et_pb_text_inner et_pb_text_align_left">
-                                                    <p>
-                                                        <span style="font-weight: 400; font-size: 15px">{{$t('Enterprise Details')}}</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div style="padding-top: 40px"
-                                                 class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner">
-                                                    <h1>
-                                                        <img src="assets/version-icon.png">
-                                                        <span style="font-size: 24px;padding-bottom: 0px;font-weight: bold;"
+                                            <div style="display: flex; flex-direction: row; padding-top: 40px;">
+                                                <img src="assets/version-icon.png" style="height: 15px; margin: 10px 10px 0px 0px;">
+                                                <div style="display: flex; flex-direction: column">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
+                                                        <div class="et_pb_text_inner">
+                                                            <h1>
+                                                        <span style="font-size: 24px; padding-bottom: 0px;font-weight: bold;"
                                                               class="blob-code-inner blob-code-marker"
                                                               data-code-marker="+">{{$t('Personally')}}</span>
-                                                    </h1>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="et_pb_module  et_pb_text_align_left ">
+                                                        <div class="et_pb_text_inner et_pb_text_align_left">
+                                                            <p>
+                                                                <span style="font-weight: 400; font-size: 15px">{{$t('Personally Details')}}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="et_pb_module  et_pb_text_align_left ">
-                                                <div class="et_pb_text_inner et_pb_text_align_left"><p><span
-                                                        style="font-weight: 400; font-size: 15px">{{$t('Personally Details')}}</span>
-                                                </p></div>
-                                            </div>
-                                            <div style="padding-top: 40px"
-                                                 class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner">
-                                                    <h1>
-                                                        <img src="assets/version-icon.png">
-                                                        <span style="font-size: 24px;padding-bottom: 0px;font-weight: bold;"
+                                            <div style="display: flex; flex-direction: row; padding-top: 40px;">
+                                                <img src="assets/version-icon.png" style="height: 15px; margin: 10px 10px 0px 0px;">
+                                                <div style="display: flex; flex-direction: column">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
+                                                        <div class="et_pb_text_inner">
+                                                            <h1>
+                                                        <span style="font-size: 24px; padding-bottom: 0px;font-weight: bold;"
                                                               class="blob-code-inner blob-code-marker"
                                                               data-code-marker="+">{{$t('Content creator')}}</span>
-                                                    </h1>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="et_pb_module  et_pb_text_align_left ">
+                                                        <div class="et_pb_text_inner et_pb_text_align_left">
+                                                            <p>
+                                                                <span style="font-weight: 400; font-size: 15px">{{$t('Content creator Details')}}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="et_pb_module  et_pb_text_align_left ">
-                                                <div class="et_pb_text_inner et_pb_text_align_left"><p><span
-                                                        style="font-weight: 400; font-size: 15px">{{$t('Content creator Details')}}</span>
-                                                </p></div>
-                                            </div>
-                                            <div style="padding-top: 40px"
-                                                 class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner">
-                                                    <h1>
-                                                        <img src="assets/version-icon.png">
-                                                        <span style="font-size: 24px;padding-bottom: 0px;font-weight: bold;"
+                                            <div style="display: flex; flex-direction: row; padding: 40px 0;">
+                                                <img src="assets/version-icon.png" style="height: 15px; margin: 10px 10px 0px 0px;">
+                                                <div style="display: flex; flex-direction: column">
+                                                    <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
+                                                        <div class="et_pb_text_inner">
+                                                            <h1>
+                                                        <span style="font-size: 24px; padding-bottom: 0px;font-weight: bold;"
                                                               class="blob-code-inner blob-code-marker"
                                                               data-code-marker="+">{{$t('AI and Big Data Researcher')}}</span>
-                                                    </h1>
-                                                </div>
-                                            </div>
-                                            <div style="padding-bottom: 40px"
-                                                 class="et_pb_module  et_pb_text_align_left ">
-                                                <div class="et_pb_text_inner et_pb_text_align_left">
-                                                    <p><span
-                                                            style="font-weight: 400; font-size: 15px">{{$t('AI and Big Data Researcher Details')}}</span>
-                                                    </p>
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="et_pb_module  et_pb_text_align_left ">
+                                                        <div class="et_pb_text_inner et_pb_text_align_left">
+                                                            <p>
+                                                                <span style="font-weight: 400; font-size: 15px">{{$t('AI and Big Data Researcher Details')}}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1371,61 +1391,47 @@
                                         <div class="et_pb_column et_pb_column_1_2 et_pb_css_mix_blend_mode_passthrough et-last-child">
                                             <div style="width: 45% !important; margin: 0 2%;"
                                                  class="et_pb_column et_pb_column_1_2 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
-                                                <div style="border-radius:10px;background-color: #ffffff ; box-shadow: rgba(138, 141, 153, 0.08) 3px 3px 3px 3px"
+                                                <div style="padding: 25px; border-radius:10px;background-color: #ffffff; box-shadow: 0px 16px 20px 2px rgba(138, 141, 153, 0.08);"
                                                      class="et_pb_text_inner ">
-                                                    <img style="margin: 20px" src="assets/services-icon1.png">
-                                                    <h2 class="et_pb_text_align_center">
-                                                     <span style="font-weight: bold;font-size: 28px;"
-                                                           class="blob-code-inner blob-code-marker"
-                                                           data-code-marker="+">{{$t('24/7 Support')}}</span>
-                                                    </h2>
-                                                    <div class="et_pb_text_inner et_pb_text_align_center">
-                                                        <p style="margin: 15px;">
-                                                            <span style="font-weight: 400;">{{$t('24/7 Support Details')}}</span>
-                                                        </p>
+                                                    <img src="assets/services-icon1.png">
+                                                    <div style="margin: 20px 0;" class="et_pb_text_align_left">
+                                                        <span style="font-weight: bold; font-size: 24px; color: #333333;">{{$t('24/7 Support')}}</span>
+                                                    </div>
+                                                    <div class="et_pb_text_align_left">
+                                                        <span style="font-weight: 400;">{{$t('24/7 Support Details')}}</span>
                                                     </div>
                                                 </div>
-                                                <div style="margin-top: 10%;border-radius:10px;background-color: #ffffff ; box-shadow: rgba(138, 141, 153, 0.08) 3px 3px 3px 3px"
+                                                <div style="margin-top: 10%; padding: 25px; border-radius:10px;background-color: #ffffff; box-shadow: 0px 16px 20px 2px rgba(138, 141, 153, 0.08);"
                                                      class="et_pb_text_inner ">
-                                                    <img style="margin: 20px" src="assets/services-icon3.png">
-                                                    <h2 class="et_pb_text_align_center">
-                                                       <span style="font-weight: bold;font-size: 28px;"
-                                                             class="blob-code-inner blob-code-marker"
-                                                             data-code-marker="+">{{$t('Global distribution')}}</span>
-                                                    </h2>
-                                                    <div class="et_pb_text_inner et_pb_text_align_center">
-                                                        <p style="margin: 15px;">
-                                                            <span style="font-weight: 400;">{{$t('Global distribution Details')}}</span>
-                                                        </p>
+                                                    <img src="assets/services-icon1.png">
+                                                    <div style="margin: 20px 0;" class="et_pb_text_align_left">
+                                                        <span style="font-weight: bold; font-size: 24px; color: #333333;">{{$t('Global distribution')}}</span>
+                                                    </div>
+                                                    <div class="et_pb_text_align_left">
+                                                        <span style="font-weight: 400;">{{$t('Global distribution Details')}}</span>
                                                     </div>
                                                 </div>
                                             </div> <!-- .et_pb_column -->
                                             <div style="width: 45% !important; margin: 0 2%;"
                                                  class="et_pb_column et_pb_column_1_2  et_pb_css_mix_blend_mode_passthrough">
-                                                <div style="margin-top: 15%;border-radius:10px;background-color: #ffffff ; box-shadow: rgba(138, 141, 153, 0.08) 3px 3px 3px 3px"
+                                                <div style="margin-top: 15%; padding: 25px; border-radius:10px;background-color: #ffffff; box-shadow: 0px 16px 20px 2px rgba(138, 141, 153, 0.08);"
                                                      class="et_pb_text_inner ">
-                                                    <img style="margin: 20px" src="assets/services-icon2.png">
-                                                    <h2 class="et_pb_text_align_center">
-                                                    <span style="font-weight: bold;font-size: 28px;"
-                                                          class="blob-code-inner blob-code-marker" data-code-marker="+">{{$t('Steady growth')}}</span>
-                                                    </h2>
-                                                    <div class="et_pb_text_inner et_pb_text_align_center">
-                                                        <p style="margin-top: 15px;padding-bottom: 15px">
-                                                            <span style="font-weight: 400;">{{$t('Steady growth Details')}}</span>
-                                                        </p>
+                                                    <img src="assets/services-icon2.png">
+                                                    <div style="margin: 20px 0;" class="et_pb_text_align_left">
+                                                        <span style="font-weight: bold; font-size: 24px; color: #333333;">{{$t('Steady growth')}}</span>
+                                                    </div>
+                                                    <div class="et_pb_text_align_left">
+                                                        <span style="font-weight: 400;">{{$t('Steady growth Details')}}</span>
                                                     </div>
                                                 </div>
-                                                <div style="margin-top: 10%;border-radius:10px;background-color: #ffffff ; box-shadow: rgba(138, 141, 153, 0.08) 3px 3px 3px 3px"
+                                                <div style="margin-top: 10%; padding: 25px; border-radius:10px;background-color: #ffffff; box-shadow: 0px 16px 20px 2px rgba(138, 141, 153, 0.08);"
                                                      class="et_pb_text_inner ">
-                                                    <img style="margin: 20px" src="assets/services-icon4.png">
-                                                    <h2 class="et_pb_text_align_center">
-                                                    <span style="font-weight: bold;font-size: 28px;"
-                                                          class="blob-code-inner blob-code-marker" data-code-marker="+">{{$t('Cost-effective')}}</span>
-                                                    </h2>
-                                                    <div class="et_pb_text_inner et_pb_text_align_center">
-                                                        <p style="margin-top: 15px;padding-bottom: 15px">
-                                                            <span style="font-weight: 400;">{{$t('Cost-effective Details')}}</span>
-                                                        </p>
+                                                    <img src="assets/services-icon4.png">
+                                                    <div style="margin: 20px 0;" class="et_pb_text_align_left">
+                                                        <span style="font-weight: bold; font-size: 24px; color: #333333;">{{$t('Cost-effective')}}</span>
+                                                    </div>
+                                                    <div class="et_pb_text_align_left">
+                                                        <span style="font-weight: 400;">{{$t('Cost-effective Details')}}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2149,7 +2155,8 @@ div.et_pb_section.et_pb_section_0 {
 }
 
 .et_pb_text_1.et_pb_text {
-    color: #b7b7b7 !important
+    color: #CED7F5 !important;
+    opacity: 0.6;
 }
 
 .et_pb_text_1 {
@@ -2172,6 +2179,10 @@ body #page-container .et_pb_section .et_pb_button_0 {
     font-weight: 700 !important;
     /*background-color: #006EFF*/
     background: linear-gradient(to right, #1C5DFF, #8742FF);
+}
+
+.et_pb_button_0_a {
+    margin: 26px 26px 0px 0px;
 }
 
 .et_pb_button_12, .et_pb_button_12:after {
