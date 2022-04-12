@@ -2056,7 +2056,7 @@
                     return
                 }
                 this.submitClick = false
-                axios.post('http://file.froghub.io/api/from/contactUs', {email: this.email}).then(()=> {
+                axios.post('https://files.froghub.io/api/from/contactUs', {email: this.email}).then(()=> {
                     this.submitClick = true
                     this.message('submit success', 'success')
                 }).catch(err => {
