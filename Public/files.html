@@ -666,7 +666,7 @@
     #top-menu li a, .et_search_form_container input {
         font-weight: normal;
         font-style: normal;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         text-decoration: none
     }
 
@@ -1193,14 +1193,14 @@
                             style="padding: 10px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 5px;">
                             <a style="padding-bottom: 0;">{{curLang}}</a>
                             <ul class="sub-menu sub-menu-normal" style="margin-top: 20px; ">
-                                <li v-if="curLang == 'EN'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
-                                        style="color: #1D5DFF !important;" @click="toggleLang('en')">EN</a></li>
+                                <li v-if="curLang == 'English'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
+                                        style="color: #1D5DFF !important;" @click="toggleLang('English')">English</a></li>
                                 <li v-else class="menu-item menu-item-type-custom menu-item-object-custom"><a
-                                        @click="toggleLang('en')">EN</a></li>
-                                <li v-if="curLang == 'CN'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
-                                        style="color: #1D5DFF !important;" @click="toggleLang('cn')">CN</a></li>
+                                        @click="toggleLang('English')">English</a></li>
+                                <li v-if="curLang == '中文'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
+                                        style="color: #1D5DFF !important;" @click="toggleLang('中文')">中文</a></li>
                                 <li v-else class="menu-item menu-item-type-custom menu-item-object-custom"><a
-                                        @click="toggleLang('cn')">CN</a></li>
+                                        @click="toggleLang('中文')">中文</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -1237,18 +1237,18 @@
                                     <div class="et_pb_row et_pb_row_0 et_pb_gutters1">
                                         <div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
                                             <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner"><h1>{{$t('Stored On The IPFS Network')}}</h1></div>
+                                                <div class="et_pb_text_inner"><h1>{{$t('Human Aata Factories')}}</h1></div>
                                             </div> <!-- .et_pb_text -->
                                             <div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_bg_layout_light">
-                                                <div class="et_pb_text_inner"><p><span>{{$t('Stored On The IPFS Network Details')}}</span></p>
+                                                <div class="et_pb_text_inner"><p><span style="">{{$t('Human Aata Factories Details')}}</span></p>
                                                 </div>
                                             </div> <!-- .et_pb_text -->
-                                            <div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_tablet_center et_pb_module ">
-                                                <a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
-                                                   href="https://files.froghub.io" target="_blank">{{$t('Store My Data')}}</a>
+                                            <div class="et_pb_button_module_wrapper et_pb_button_10_wrapper  et_pb_module et_pb_button_alignment_tablet_center">
+                                                <a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light et_pb_button_0_a"
+                                                   href="./filfrog.html" target="_self">{{$t('Store My Data')}}</a>
                                             </div>
                                         </div> <!-- .et_pb_column -->
-                                        <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                        <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child" >
                                             <div class="et_pb_module et_pb_image et_pb_image_0">
                                                 <span class="et_pb_image_wrap "><img
                                                         src="https://storage.froghub.io/froghub-home-html/assets/web3.png"
@@ -1657,8 +1657,9 @@
     (function ($) {
         jq = $;
     })(jQuery);
-    let initCurLang = 'EN';
-    if (window.localStorage.getItem("curLang") == 'EN' || window.localStorage.getItem("curLang") == 'CN') {
+    let supportLanguage = {'English': 'en', '中文': 'cn',}
+    let initCurLang = 'English';
+    if (window.localStorage.getItem("curLang") == 'English' || window.localStorage.getItem("curLang") == '中文') {
         initCurLang = window.localStorage.getItem("curLang")
     }
     new Vue({
@@ -1667,7 +1668,7 @@
             curLang: initCurLang
         },
         i18n: new VueI18n({
-            locale: initCurLang.toLocaleLowerCase(),
+            locale: supportLanguage[initCurLang],
             messages: language
         }),
         mounted() {
@@ -1678,8 +1679,8 @@
         },
         methods: {
             toggleLang(lang) {
-                this.curLang = lang.toUpperCase()
-                this.$i18n.locale = lang
+                this.curLang = lang
+                this.$i18n.locale = supportLanguage[lang]
                 window.localStorage.setItem('curLang', this.curLang)
             },
             setup_collapsible_submenus() {
@@ -1703,8 +1704,8 @@
                         }
                         jq(this).on('click', function (_) {
                             let lang = jq(this)[0].text
-                            if (lang == 'EN' || lang == 'CN') {
-                                that.toggleLang(lang.toLocaleLowerCase())
+                            if (lang == 'English' || lang == '中文') {
+                                that.toggleLang(lang)
                                 that.setup_collapsible_submenus()
                             }
                             that.hiddenMenu()

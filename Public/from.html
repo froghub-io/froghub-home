@@ -666,7 +666,7 @@
     #top-menu li a, .et_search_form_container input {
         font-weight: normal;
         font-style: normal;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         text-decoration: none
     }
 
@@ -1180,14 +1180,14 @@
                             style="padding: 10px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 5px;">
                             <a style="padding-bottom: 0;">{{curLang}}</a>
                             <ul class="sub-menu sub-menu-normal" style="margin-top: 20px; ">
-                                <li v-if="curLang == 'EN'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
-                                        style="color: #1D5DFF !important;" @click="toggleLang('en')">EN</a></li>
+                                <li v-if="curLang == 'English'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
+                                        style="color: #1D5DFF !important;" @click="toggleLang('English')">English</a></li>
                                 <li v-else class="menu-item menu-item-type-custom menu-item-object-custom"><a
-                                        @click="toggleLang('en')">EN</a></li>
-                                <li v-if="curLang == 'CN'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
-                                        style="color: #1D5DFF !important;" @click="toggleLang('cn')">CN</a></li>
+                                        @click="toggleLang('English')">English</a></li>
+                                <li v-if="curLang == '中文'" class="menu-item menu-item-type-custom menu-item-object-custom sub-menu-selected"><a
+                                        style="color: #1D5DFF !important;" @click="toggleLang('中文')">中文</a></li>
                                 <li v-else class="menu-item menu-item-type-custom menu-item-object-custom"><a
-                                        @click="toggleLang('cn')">CN</a></li>
+                                        @click="toggleLang('中文')">中文</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -1564,8 +1564,9 @@
     (function ($) {
         jq = $;
     })(jQuery);
-    let initCurLang = 'EN';
-    if (window.localStorage.getItem("curLang") == 'EN' || window.localStorage.getItem("curLang") == 'CN') {
+    let supportLanguage = {'English': 'en', '中文': 'cn',}
+    let initCurLang = 'English';
+    if (window.localStorage.getItem("curLang") == 'English' || window.localStorage.getItem("curLang") == '中文') {
         initCurLang = window.localStorage.getItem("curLang")
     }
     new Vue({
@@ -1581,7 +1582,7 @@
             submitClick: true
         },
         i18n: new VueI18n({
-            locale: initCurLang.toLocaleLowerCase(),
+            locale: supportLanguage[initCurLang],
             messages: language
         }),
         mounted() {
@@ -1592,8 +1593,8 @@
         },
         methods: {
             toggleLang(lang) {
-                this.curLang = lang.toUpperCase()
-                this.$i18n.locale = lang
+                this.curLang = lang
+                this.$i18n.locale = supportLanguage[lang]
                 window.localStorage.setItem('curLang', this.curLang)
             },
             setup_collapsible_submenus() {
@@ -1617,8 +1618,8 @@
                         }
                         jq(this).on('click', function (_) {
                             let lang = jq(this)[0].text
-                            if (lang == 'EN' || lang == 'CN') {
-                                that.toggleLang(lang.toLocaleLowerCase())
+                            if (lang == 'English' || lang == '中文') {
+                                that.toggleLang(lang)
                                 that.setup_collapsible_submenus()
                             }
                             that.hiddenMenu()
