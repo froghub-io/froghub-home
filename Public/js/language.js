@@ -60,7 +60,7 @@ var language = {
         'Use computing power in the cloud Details 3': '使用开放源码（github）',
         'Learn more about Cloud C2': '了解更多关于Cloud C2',
         'Contact Us': '联系我们',
-        'Contact Us Details 1': '更便捷的使用Web3存储',
+        'Contact Us Details 1': '让我们共同构建一个简单的web3存储',
         'Contact Us Details 2': '请确保邮件准确无误',
         'Enter your email': '输入你的邮箱',
         'Submit': '提交',
