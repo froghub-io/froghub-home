@@ -820,13 +820,72 @@
         }
     }
 
+    @media only screen and (max-width: 1338px) {
+        .et_pb_pricing {
+            display: flex;
+            width: 60% !important;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 3px 0;
+        }
+
+        .et_pb_pricing_column {
+            width: 46% !important;
+            margin-top: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 1339px) {
+        .et_pb_pricing {
+            display: flex;
+            width: 100%!important;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 3px 0;
+        }
+
+        .et_pb_pricing_column {
+            width: 23.6% !important;
+        }
+    }
+
     @media only screen and (max-width: 980px) {
+        .et_pb_pricing {
+            display: flex;
+            width: 50% !important;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 3px 0;
+        }
+
         #main-header .nav li ul, .et-search-form, #main-header .et_mobile_menu {
             background-color: #2c374b
+        }
+
+        .et_pb_column_3 {
+            margin-bottom: 60px;
+        }
+
+        .et_pb_column_4 {
+            position: relative;
+            display: flex;
+            border-radius: 8px 8px 8px 8px;
+            background: #ffffff;
+            padding: 2%;
+            width: calc(100% - 0px) !important;
+            margin-right: 0px !important;
         }
     }
 
     @media only screen and (max-width: 767px) {
+        .et_pb_pricing {
+            display: flex;
+            width: 60% !important;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 3px 0;
+        }
+
         .et_pb_section {
             padding: 63px 0
         }
@@ -837,6 +896,16 @@
 
         .et_pb_row, .et_pb_column .et_pb_row_inner {
             padding: 44px 0
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .et_pb_pricing {
+            display: flex;
+            width: 80% !important;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 3px 0;
         }
     }
 
@@ -1229,61 +1298,214 @@
                         <div class="et-l et-l--post">
                             <div class="et_builder_inner_content et_pb_gutters3">
                                 <!--头部-->
-                                <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+                                <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider">
                                     <div class="et_pb_row et_pb_row_0 et_pb_gutters1">
-                                        <div style="width: 100%;"
+                                        <div style="width: 100%; margin-bottom: 50px; "
                                              class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
                                             <div style="width: 100%"
                                                  class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_center et_pb_bg_layout_light">
                                                 <div class="et_pb_text_inner">
-                                                    <h1>{{$t('Are you ready?')}}</h1>
+                                                    <h1>{{$t('FrogHub pricing title')}}</h1>
                                                 </div>
                                                 <div class="et_pb_text_inner">
                                                     <div class="et_pb_text_inner"><p><span
-                                                            style="font-size: 18px; color: #CED7F5; opacity: 0.6;">{{$t('Are you ready? Details')}}</span>
+                                                            style="font-size: 18px; color: #CED7F5; opacity: 0.6;">{{$t('FrogHub pricing title detail')}}</span>
                                                     </p></div>
                                                 </div>
                                             </div> <!-- .et_pb_text -->
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 45px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                <input style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 0 150px 0 15px;"
-                                                       :placeholder="$t('Full name')" v-model="fullName">
-                                            </div>
-
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 45px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                <input style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 0 150px 0 15px;"
-                                                       :placeholder="$t('Email')" v-model="email">
-                                            </div>
-
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 45px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                <input style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 0 150px 0 15px;"
-                                                       :placeholder="$t('Phone')" v-model="phone">
-                                            </div>
-
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 45px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                <input style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 0 150px 0 15px;"
-                                                       :placeholder="$t('Provider ID')" v-model="providerId">
-                                            </div>
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 45px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                <input style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 0 150px 0 15px;"
-                                                       :placeholder="$t('Your provider configuration')" v-model="configuration">
-                                            </div>
-                                            <div style="margin: 40px auto 30px auto; width: 100%; max-width: 700px; height: 75px; border-radius: 10px; background: #ffffff; position: relative;">
-                                                    <textarea
-                                                            style="width: 100%; height: 100%; border: none; outline: none; border-radius: 10px; padding: 15px;"
-                                                            :placeholder="$t('Notes')" v-model="notes"></textarea>
-                                            </div>
                                             <div class="et_pb_button_module_wrapper et_pb_text_align_center et_pb_button_10_wrapper et_pb_button_alignment_tablet_center et_pb_module ">
-                                                <a v-if="submitClick" style="margin: 26px 13px 0px 13px;"
+                                                <a style="margin: 26px 13px 0px 13px;"
                                                    class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
-                                                   href="javascript:;" target="_self" @click="submit">{{$t('Submit')}}</a>
-                                                <a v-else style="margin: 26px 13px 0px 13px; opacity: 0.5;"
-                                                   class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
-                                                   href="javascript:;" target="_self">{{$t('Submit')}}</a>
+                                                   href="https://files.froghub.io/" target="_blank">{{$t('Get started')}}</a>
                                             </div>
                                         </div> <!-- .et_pb_column -->
                                     </div> <!-- .et_pb_row -->
+                                    <div class="et_pb_bottom_inside_divider et-no-transition"></div>
                                 </div> <!-- .et_pb_section -->
                                 <!--头部-->
+
+                                <!--灵活计划-->
+                                <div class="et_pb_section et_pb_section_4 et_section_regular">
+                                    <div class="et_pb_row et_pb_row_1">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner"><h2><span
+                                                        class="blob-code-inner blob-code-marker" data-code-marker="+">{{$t('Flexible Plans')}}</span>
+                                                </h2></div>
+                                            </div> <!-- .et_pb_text -->
+                                            <div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_center et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner"><p><span style="font-weight: 400;">{{$t('Flexible Plans details')}}</span></p></div>
+                                            </div> <!-- .et_pb_text -->
+                                        </div> <!-- .et_pb_column -->
+                                    </div> <!-- .et_pb_row -->
+                                    <div class="et_pb_row et_pb_row_1">
+                                        <div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et_pb_pricing_column" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px;">
+                                            <div style="display: flex; flex: 1; width: 100%; flex-direction: column; justify-content: flex-start; align-items: center">
+                                                <h2 style="color: #1C5DFF; font-weight: bold;">{{$t('Free')}}</h2>
+                                                <span style="display: inline-block; text-align: center">For personal or hobby projects that aren’t business-critical.</span>
+                                                <span style="color: #74788d; font-size: 45px; padding: 20px 0; letter-spacing: 2px;">$0</span>
+                                                <span style="color: #74788d; font-size: 13px;">/month</span>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif" >3 buckets</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">3 kms</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">30 GB of storage</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">1 GB gateway bandwidth</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">10,000 gateway content requests</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">300 minute build (Then $7 for every $500)</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">1,000 forms submit</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; bottom: 30px;">
+                                                <div class="et_pb_button_module_wrapper et_pb_text_align_center et_pb_button_10_wrapper et_pb_button_alignment_tablet_center et_pb_module " style="padding: 0; margin: 0;">
+                                                    <a style="margin: 26px 13px 0px 13px; white-space: nowrap"
+                                                       class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
+                                                       href="https://files.froghub.io/" target="_blank">{{$t('Select Free')}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et_pb_pricing_column" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px;">
+                                            <div style="display: flex; flex: 1; width: 100%; flex-direction: column; justify-content: flex-start; align-items: center">
+                                                <h2 style="color: #1C5DFF; font-weight: bold;">{{$t('Pro')}}</h2>
+                                                <span style="display: inline-block; text-align: center">For professional websites that aren't business-critical.</span>
+                                                <span style="color: #74788d; font-size: 45px; padding: 20px 0; letter-spacing: 2px;">$20</span>
+                                                <span style="color: #74788d; font-size: 13px;">/month</span>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif" >10 buckets</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">10 kms</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">200 GB of storage</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">1 gateways</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">100 GB gateway bandwidth</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">100,000 gateway content requests</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">15,000 minute build (Then $7 for every $500)</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">5,000 forms submit</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; bottom: 30px;">
+                                                <div class="et_pb_button_module_wrapper et_pb_text_align_center et_pb_button_10_wrapper et_pb_button_alignment_tablet_center et_pb_module " style="padding: 0; margin: 0;">
+                                                    <a style="margin: 26px 13px 0px 13px; white-space: nowrap"
+                                                       class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
+                                                       href="https://files.froghub.io/" target="_blank">{{$t('Select Pro')}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et_pb_pricing_column" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px;">
+                                            <div style="display: flex; flex: 1; width: 100%; flex-direction: column; justify-content: center; align-items: center">
+                                                <h2 style="color: #1C5DFF; font-weight: bold;">{{$t('Business')}}</h2>
+                                                <span style="display: inline-block; text-align: center">For small businesses operating online.</span>
+                                                <span style="color: #74788d; font-size: 45px; padding: 20px 0; letter-spacing: 2px;">$200</span>
+                                                <span style="color: #74788d; font-size: 13px;">/month</span>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif" >20 buckets</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">20 kms</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">600 GB of storage</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">5 gateways</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">750 GB gateway bandwidth</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">1,000,000 gateway content requests</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">250,000 minute build (Then $7 for every $500)</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif">20,000 forms submit</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; bottom: 30px;">
+                                                <div class="et_pb_button_module_wrapper et_pb_text_align_center et_pb_button_10_wrapper et_pb_button_alignment_tablet_center et_pb_module " style="padding: 0; margin: 0;">
+                                                    <a style="margin: 26px 13px 0px 13px; white-space: nowrap"
+                                                       class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
+                                                       href="https://files.froghub.io/" target="_blank">{{$t('Select Business')}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et_pb_pricing_column" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px;">
+                                            <div style="display: flex; flex: 1; width: 100%; flex-direction: column; justify-content: center; align-items: center">
+                                                <h2 style="color: #1C5DFF; font-weight: bold;">{{$t('Enterprise')}}</h2>
+                                                <span style="display: inline-block; text-align: center">For mission-critical applications that are core to your business.</span>
+                                                <span style="color: #74788d; font-size: 45px; padding: 20px 0; letter-spacing: 2px;">Custom</span>
+                                                <span style="color: #74788d; font-size: 13px;">/month</span>
+                                                <div class="et_pb_pricing">
+                                                    <img style="width: 16px; height: 14px; margin-top: 5px; margin-right: 10px;" src="https://storage.froghub.io/froghub-home-html/assets/check.png">
+                                                    <span style="font-size: 16px; color: #222222; font-family: Mulish,sans-serif" >Customized processing requirements</span>
+                                                </div>
+                                                <div class="et_pb_pricing">
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; bottom: 30px;">
+                                                <div class="et_pb_button_module_wrapper et_pb_text_align_center et_pb_button_10_wrapper et_pb_button_alignment_tablet_center et_pb_module " style="padding: 0; margin: 0;">
+                                                    <a style="margin: 26px 13px 0px 13px; white-space: nowrap"
+                                                       class="et_pb_button et_pb_button_0 et_pb_bg_layout_light"
+                                                       href="https://files.froghub.io/" target="_blank">{{$t('Select Enterprise')}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- .et_pb_section -->
+                                <!--灵活计划-->
 
                                 <!--底部-->
                                 <div class="et_pb_section et_pb_section_16 et_section_regular">
@@ -1567,7 +1789,6 @@
 
     gtag('config', 'GA_MEASUREMENT_ID');
 </script>
-<script type='text/javascript' src='./js/axios.min.js'></script>
 <script>
     var jq
     (function ($) {
@@ -1581,14 +1802,7 @@
     new Vue({
         el: '#page-container',
         data: {
-            curLang: initCurLang,
-            fullName: '',
-            email: '',
-            phone: '',
-            providerId: '',
-            configuration: '',
-            notes: '',
-            submitClick: true
+            curLang: initCurLang
         },
         i18n: new VueI18n({
             locale: supportLanguage[initCurLang],
@@ -1646,75 +1860,6 @@
                     jq('#mobile_menu').css({'display': 'none'})
                 }, 250)
             },
-            submit () {
-                if (!this.fullName) {
-                    this.message('Full name empty', 'error')
-                    return
-                }
-                let reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-                if(!reg.test(this.email)) {
-                    this.message('Email format error', 'error')
-                    return
-                }
-                if (!this.phone) {
-                    this.message('Phone empty', 'error')
-                    return
-                }
-                this.submitClick = false
-                axios.post('https://files.froghub.io/api/from/areYouReady2', {fullName: this.fullName, email: this.email, phone: this.phone, notes: this.notes, providerId: this.providerId, configuration: this.configuration }).then(()=> {
-                    this.submitClick = true
-                    this.message('submit success', 'success')
-                }).catch(err => {
-                    this.submitClick = true
-                    this.message(err, 'error')
-                })
-            },
-            message (msg, type) {
-                if (!msg) return;
-                const body = document.body;
-                const messageBox = document.createElement("div");
-                messageBox.style.position = 'fixed';
-                messageBox.style.top = '20px';
-                messageBox.style.left = '0px';
-                messageBox.style.right = '0px';
-                messageBox.style.zIndex = 999;
-                messageBox.style.fontSize = '16px';
-                const message = document.createElement("div");
-                switch (type || '') {
-                    case 'success':
-                        message.style.width = '260px';
-                        message.style.margin = '0 auto';
-                        message.style.padding = '10px 30px';
-                        message.style.border = '1px solid #e5f3da';
-                        message.style.borderRadius = '5px';
-                        message.style.background = '#f2f9ec';
-                        message.style.color = '#7ec050';
-                        break;
-                    case 'error':
-                        message.style.width = '260px';
-                        message.style.margin = '0 auto';
-                        message.style.padding = '10px 30px';
-                        message.style.border = '1px solid #f9e3e3';
-                        message.style.borderRadius = '5px';
-                        message.style.background = '#fcf1f0';
-                        message.style.color = '#e47471';
-                        break;
-                    default:
-                        message.style.width = '260px';
-                        message.style.margin = '0 auto';
-                        message.style.padding = '10px 30px';
-                        message.style.border = '1px solid #eceef5';
-                        message.style.borderRadius = '5px';
-                        message.style.background = '#eef2fb';
-                        message.style.color = '#919399';
-                }
-                message.innerHTML = msg;
-                messageBox.append(message);
-                body.append(messageBox);
-                setTimeout(() => {
-                    messageBox.remove();
-                }, 1500);
-            }
         }
     })
 </script>
@@ -1724,7 +1869,7 @@
 }
 
 div.et_pb_section.et_pb_section_0 {
-    background-image: url(https://storage.froghub.io/froghub-home-html/assets/banner.png) !important
+    background-image: url(https://storage.froghub.io/froghub-home-html/assets/frogfs_banner.png) !important
 }
 
 .et_pb_section_0.et_pb_section {
@@ -1736,11 +1881,19 @@ div.et_pb_section.et_pb_section_0 {
 }
 
 .et_pb_section_0.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI2NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMTQwVjBTOTkzLjQ2IDE0MCA2NDAgMTM5IDAgMCAwIDB2MTQweiIvPjwvZz48L3N2Zz4=);
+    background-image: url(https://storage.froghub.io/froghub-home-html/assets/divider_gray.png);
     background-size: 100% 65px;
     bottom: 0;
     height: 65px;
     z-index: 1
+}
+
+.et_pb_pricing {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3px 0 !important;
 }
 
 .et_pb_row_0.et_pb_row {
@@ -1776,10 +1929,10 @@ div.et_pb_section.et_pb_section_0 {
 }
 
 .et_pb_button_0_wrapper .et_pb_button_0, .et_pb_button_0_wrapper .et_pb_button_0:hover {
-    padding-top: 10px !important;
-    padding-right: 30px !important;
-    padding-bottom: 10px !important;
-    padding-left: 30px !important
+    padding-top: 6px !important;
+    padding-right: 20px !important;
+    padding-bottom: 6px !important;
+    padding-left: 20px !important
 }
 
 body #page-container .et_pb_section .et_pb_button_0 {
@@ -1997,10 +2150,16 @@ body #page-container .et_pb_section .et_pb_button_0 {
 
 .et_pb_image_1 {
     padding-top: 0px;
-    padding-bottom: 25px;
-    margin-top: 30px !important;
+    margin-top: -30px !important;
     margin-bottom: 0px !important;
     max-width: 26%;
+    text-align: center
+}
+
+.et_pb_image_36 {
+    padding-top: 0px;
+    margin-bottom: 0px !important;
+    max-width: 100%;
     text-align: center
 }
 
@@ -3692,35 +3851,29 @@ ul.et_pb_social_media_follow_0 a.icon {
 }
 
 .et_pb_column_3 {
+    position: relative;
     border-radius: 8px 8px 8px 8px;
-    overflow: hidden;
-    border-top-width: 8px;
-    border-top-color: #ED55EB;
-    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.17)
+    background: #ffffff;
 }
 
 .et_pb_column_4 {
+    position: relative;
+    display: flex;
     border-radius: 8px 8px 8px 8px;
-    overflow: hidden;
-    border-top-width: 8px;
-    border-top-color: #4CBDDD;
-    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.17)
+    background: #ffffff;
+    padding: 2%;
+    width: calc( 50% - 20px ) ;
+    margin-right: 20px !important;
 }
 
-.et_pb_column_5 {
-    border-radius: 8px 8px 8px 8px;
-    overflow: hidden;
-    border-top-width: 8px;
-    border-top-color: #36FB9B;
-    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.17)
+.et_pb_column_4 div:first-child {
+    flex: 1;
+    justify-content: center;
 }
 
-.et_pb_column_6 {
-    border-radius: 8px 8px 8px 8px;
-    overflow: hidden;
-    border-top-width: 8px;
-    border-top-color: #FFEC06;
-    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.17)
+.et_pb_column_4 div:last-child {
+    flex: 10;
+    margin-left: 3.4%;
 }
 
 .et_pb_column_26 {
@@ -3974,7 +4127,7 @@ ul.et_pb_social_media_follow_0 a.icon {
     }
 
     .et_pb_section_0.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMTQwVjBTOTkzLjQ2IDE0MCA2NDAgMTM5IDAgMCAwIDB2MTQweiIvPjwvZz48L3N2Zz4=);
+        background-image: url(https://storage.froghub.io/froghub-home-html/assets/divider_gray.png);
         background-size: 100% 40px;
         bottom: 0;
         height: 40px;
@@ -4595,26 +4748,6 @@ ul.et_pb_social_media_follow_0 a.icon {
         padding-top: 20px !important
     }
 
-    .et_pb_column_3 {
-        border-top-width: 8px;
-        border-top-color: #ED55EB
-    }
-
-    .et_pb_column_4 {
-        border-top-width: 8px;
-        border-top-color: #4CBDDD
-    }
-
-    .et_pb_column_5 {
-        border-top-width: 8px;
-        border-top-color: #36FB9B
-    }
-
-    .et_pb_column_6 {
-        border-top-width: 8px;
-        border-top-color: #FFEC06
-    }
-
     .et_pb_column_26 {
         padding-right: 10px;
         padding-left: 10px
@@ -4707,7 +4840,7 @@ ul.et_pb_social_media_follow_0 a.icon {
     }
 
     .et_pb_section_0.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIzMHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMTQwVjBTOTkzLjQ2IDE0MCA2NDAgMTM5IDAgMCAwIDB2MTQweiIvPjwvZz48L3N2Zz4=);
+        background-image: url(https://storage.froghub.io/froghub-home-html/assets/divider_gray.png);
         background-size: 100% 30px;
         bottom: 0;
         height: 30px;
@@ -5181,26 +5314,6 @@ ul.et_pb_social_media_follow_0 a.icon {
 
     .et_pb_text_51 {
         padding-top: 20px !important
-    }
-
-    .et_pb_column_3 {
-        border-top-width: 8px;
-        border-top-color: #ED55EB
-    }
-
-    .et_pb_column_4 {
-        border-top-width: 8px;
-        border-top-color: #4CBDDD
-    }
-
-    .et_pb_column_5 {
-        border-top-width: 8px;
-        border-top-color: #36FB9B
-    }
-
-    .et_pb_column_6 {
-        border-top-width: 8px;
-        border-top-color: #FFEC06
     }
 
     .et_pb_column_26 {
