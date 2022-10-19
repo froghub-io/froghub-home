@@ -1643,7 +1643,7 @@
                     return
                 }
                 this.submitClick = false
-                axios.post('https://files.froghub.io/api/from/areYouReady', {fullName: this.fullName, email: this.email, phone: this.phone, notes: this.notes }).then(()=> {
+                axios.post('https://dash.froghub.io/api/from/areYouReady', {fullName: this.fullName, email: this.email, phone: this.phone, notes: this.notes }).then(()=> {
                     this.submitClick = true
                     this.message('submit success', 'success')
                 }).catch(err => {
