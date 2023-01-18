@@ -1807,6 +1807,27 @@
 
         <span class="et_pb_scroll_top et-pb-icon"></span>
     </div> <!-- #et-main-area -->
+
+    <div class="cookies-tips" id="model-cookies-tips">
+        <div class="cookies-tips-content">
+            <div class="cookies-tips-content-icon">
+                <img src="https://storage.froghub.io/froghub-home-html/assets/cookies.png" style="width: 32px; height: 32px;" alt="">
+            </div>
+            <div class="cookies-tips-content-text">
+                We use cookies to collect anonymous site visitation data to improve the performance of our website.
+<!--                For more info read our <a href="/privacy">Privacy Notice</a>-->
+            </div>
+            <div class="cookies-tips-content-btn">
+                <div class="cookies-tips-content-btn-allow" id="cookies-tips-btn-allow">
+                    Allow
+                </div>
+                <div class="cookies-tips-content-btn-decline" id="cookies-tips-btn-decline">
+                    Decline
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div> <!-- #page-container -->
 
 <script>
@@ -2120,6 +2141,31 @@
     })
 </script>
 <script type='text/javascript' src='./js/app.js'></script>
+
+<script>
+    let cookies = document.cookie
+    let res = cookies.split(";").find(c => c.split("=")[0].trim() === 'cookie-allowed' )
+    if (res === undefined){
+        document.getElementById("model-cookies-tips").style.display="flex"
+    }else {
+        document.getElementById("model-cookies-tips").style.display="none"
+    }
+
+    document.getElementById("cookies-tips-btn-allow").onclick = () => {
+        let date = new Date()
+        date.setTime(date.getTime() + (60 * 60 * 1000 * 24 * 90))
+        document.cookie = 'cookie-allowed=yes;path="/";expires=' + date.toUTCString()+";";
+        document.getElementById("model-cookies-tips").style.display="none"
+    }
+
+    document.getElementById("cookies-tips-btn-decline").onclick = () => {
+        let date = new Date()
+        date.setTime(date.getTime() + (60 * 60 * 1000 * 24 * 90))
+        document.cookie = 'cookie-allowed=no;path="/";expires=' + date.toUTCString()+";";
+        document.getElementById("model-cookies-tips").style.display="none"
+    }
+</script>
+
 <style id="et-builder-module-design-9248-cached-inline-styles">.inline-buttons .et_pb_button_module_wrapper {
     display: inline-block
 }
@@ -5550,6 +5596,141 @@ ul.et_pb_social_media_follow_0 a.icon {
         padding-right: 0px;
         padding-left: 0px
     }
-}</style>
+}
+
+.cookies-tips {
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .cookies-tips {
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}
+
+.cookies-tips-content {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 24px 0px rgba(16, 27, 82, 0.08);
+}
+
+@media (max-width: 767px) {
+    .cookies-tips-content {
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.cookies-tips-content-icon {
+    margin-right: 24px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgb(244, 246, 248);
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .cookies-tips-content-icon {
+        display: none;
+    }
+}
+
+.cookies-tips-content-text {
+    margin-right: 8px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $primary-text-color;
+    opacity: .8;
+    width: 340px;
+}
+
+@media (max-width: 767px) {
+    .cookies-tips-content-text {
+        margin-right: 0px;
+        margin-bottom: 8px;
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.cookies-tips-content-text a {
+    color: $color-primary;
+}
+
+.cookies-tips-content-btn {
+    display: flex;
+}
+
+.cookies-tips-content-btn-allow {
+    color: rgb(255, 255, 255);
+    background-color: #101B52;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    width: 72px;
+    height: 32px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease 0s, border-color 0.25s ease 0s, color 0.25s ease 0s;
+}
+
+.cookies-tips-content-btn-allow:hover {
+    background-color: #192a7f;
+}
+
+.cookies-tips-content-btn-decline {
+    color: #101B52;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #101B52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 6px;
+    width: 72px;
+    height: 32px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease 0s, border-color 0.25s ease 0s, color 0.25s ease 0s;
+}
+
+.cookies-tips-content-btn-decline:hover {
+    background-color: #192a7f;
+    color: white;
+    border: none;
+}
+
+</style>
 </body>
 </html>
