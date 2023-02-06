@@ -9,6 +9,7 @@ var language = {
         'DOCS': '文档',
         'FrogHub All rights reserved': 'FrogHub All rights reserved.',
         'PRODUCT': '产品',
+        'QuickLinks': '快速链接',
         'Files': '存储文件',
         'Storage Provider': 'Fielcoin',
         'FrogFS': 'FrogFS',
@@ -163,7 +164,9 @@ var language = {
         'FrogHub pricing title': 'FrogHub服务开发人员的Web3平台',
         'FrogHub pricing title detail': '安全、性能和可靠性 —— 一个软件包全部搞定',
         'Flexible Plans': '灵活的产品计划',
-        'Flexible Plans details': '适用于web3的所有建设者和创建者'
+        'Flexible Plans details': '适用于web3的所有建设者和创建者',
+        'privacyNotice': '隐私声明',
+        'teams': '条款和条件'
     },
     'en': {
         'HOME': 'HOME',
@@ -171,6 +174,7 @@ var language = {
         'STORAGE PROVIDER': 'Filecoin',
         'FROGFS': 'FrogFS',
         'PRODUCTS': 'Products',
+        'QuickLinks': 'Quick Links',
         'PRICING': 'Pricing',
         'DOCS': 'Docs',
         'FrogHub All rights reserved': 'FrogHub All rights reserved.',
@@ -330,6 +334,8 @@ var language = {
         'FrogHub pricing title': 'The Developer Web3 - FrogHub Cloud',
         'FrogHub pricing title detail': 'Security, Performance, and Reliability - all in one package',
         'Flexible Plans': 'Flexible Plans',
-        'Flexible Plans details': 'For all builders & creators of web3'
+        'Flexible Plans details': 'For all builders & creators of web3',
+        'privacyNotice': 'Privacy Notice',
+        'teams': 'Terms & Conditions'
     }
 }
