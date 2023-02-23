@@ -1250,7 +1250,7 @@
                                             <div class="et_pb_button_module_wrapper et_pb_button_10_wrapper  et_pb_module et_pb_button_alignment_tablet_center">
                                                 <a style="width: 216px; text-align: center"
                                                    class="et_pb_button et_pb_button_0 et_pb_bg_layout_light et_pb_button_0_a"
-                                                   href="https://files.froghub.io/" target="_self">{{$t('Get started')}}</a>
+                                                   href="https://dash.froghub.io/" target="_self">{{$t('Get started')}}</a>
                                             </div>
                                         </div> <!-- .et_pb_column -->
                                         <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child" >
@@ -2105,7 +2105,7 @@
                     return
                 }
                 this.submitClick = false
-                axios.post('https://files.froghub.io/api/from/contactUs', {email: this.email}).then(()=> {
+                axios.post('https://dash.froghub.io/api/from/contactUs', {email: this.email}).then(()=> {
                     this.submitClick = true
                     this.message('submit success', 'success')
                 }).catch(err => {
