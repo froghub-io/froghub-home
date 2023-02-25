@@ -1,4 +1,4 @@
-![froghub-website](https://storageapi2.fleek.co/froghubman-team-bucket/cover.png)
+![froghub-website](https://storage.froghub.io/team-1578700264406253568-default/froghub.png)
 
 欢迎访问Froghub网站的源文件存储库。该网站是一个简单的静态网站，使用[Fleek](https://fleek.co)部署，托管在[Internet Computer (Dfinity)](https://dfinity.org)上。
 
